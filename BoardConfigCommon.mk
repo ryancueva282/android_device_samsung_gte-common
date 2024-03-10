@@ -16,16 +16,16 @@
 LOCAL_PATH := device/samsung/gte-common
 
 # Audio
-USE_QCOM_MIXER_PATHS := 1
+
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(LOCAL_PATH)/bluetooth
 
 # Init
-TARGET_LIBINIT_MSM8916_DEFINES_FILE := $(LOCAL_PATH)/init/init_gte.cpp
+TARGET_LIBINIT_EXYNOS3475_DEFINES_FILE := $(LOCAL_PATH)/init/init_gte.cpp
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := false
 
 # Inherit from common
-include device/samsung/msm8916-common/BoardConfigCommon.mk
+include device/samsung/exynos3475-common/BoardConfigCommon.mk
