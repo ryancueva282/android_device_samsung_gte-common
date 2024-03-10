@@ -27,7 +27,7 @@
    IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#include <init_msm8916.h>
+#include <init_exynos3475.h>
 
 void init_target_properties(void)
 {
@@ -45,30 +45,12 @@ void init_target_properties(void)
 	/* get the bootloader string */
 	std::string bootloader = property_get("ro.bootloader");
 
-	if (bootloader.find("T377P") == 0) {
-		build_id = (char *)"MMB29M";
-		device = (char *)"gtesqltespr";
-		model = (char *)"SM-T377P";
-		network_type=CDMA_DEVICE;
-		version_release = (char *)"6.0.1";
+	if (bootloader.find("T377T") == 0) {
+		device = (char *)"gtesltetmo";
+		model = (char *)"SM-T377T";
+		network_type=LTE_DEVICE;
 	}
-	else if (bootloader.find("T560NUU") == 0) {
-		build_id = (char *)"MMB29M";
-		device = (char *)"gtelwifiue";
-		model = (char *)"SM-T560NU";
-		network_type=WIFI_DEVICE;
-		version_release = (char *)"6.0.1";
-	}
-	else if (bootloader.find("T550") == 0) {
-		device = (char *)"gt510wifi";
-		model = (char *)"SM-T550";
-		network_type=WIFI_DEVICE;
-	}
-	else if (bootloader.find("T350") == 0) {
-		device = (char *)"gt58wifi";
-		model = (char *)"SM-T350";
-		network_type=WIFI_DEVICE;
-	}
+
 	else {
 		return;
 	}
