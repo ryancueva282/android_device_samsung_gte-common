@@ -28,4 +28,4 @@ TARGET_LIBINIT_EXYNOS3475_DEFINES_FILE := $(LOCAL_PATH)/init/init_gte.cpp
 TARGET_PROVIDES_LIBLIGHT := false
 
 # Inherit from common
-include device/samsung/exynos3475-common/BoardConfigCommon.mk
+include device/samsung/exynos3475-common/BoardCommonConfig.mk
