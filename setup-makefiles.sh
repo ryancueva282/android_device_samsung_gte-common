@@ -19,9 +19,9 @@
 set -e
 
 # Required!
-export DEVICES="gtelwifiue gtesqltespr gt510wifi"
+export DEVICES="gtesltetmo"
 export DEVICE_COMMON=gte-common
-export BOARD_COMMON=msm8916-common
+export BOARD_COMMON=exynos3475-common
 export VENDOR=samsung
 
 if [ -z "$SETUP_DEVICE_COMMON_DIR" ]; then
